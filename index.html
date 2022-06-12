@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Inger Lise Stensheim Portfolio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta charset="utf-8" />
+    <meta name="description" content="This is my portfolio" />
+    <meta
+      name="keywords"
+      content="portfolio, front-end developement, graphic design, web design"
+    />
+    <link rel="icon" href="img/favicon.png" />
+  </head>
+
+  <body>
+    <main>
+      <nav>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <div>
+          <a href="/"><h2 class="site-title">Portfolio</h2></a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#work">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#about">About me</a>
+          </li>
+        </ul>
+        <div class="logo">
+          <a href="/"><img src="img/logo-try.png" width="50px" /></a>
+        </div>
+      </nav>
+
+      <section class="intro">
+        <div class="intro-content">
+          <h1>A Graphic & Web Designer to be.</h1>
+          <p>
+            Hi, I'm Inger Lise Stensheim. I'm a student in front-end
+            developement, and former student in Graphic Design. Below are some
+            projects I've made on my way and on the side.
+          </p>
+          <a href="#work">View projects</a>
+        </div>
+        <img src="./img/me-bw.png" />
+      </section>
+
+      <section id="work">
+        <h2 id="work-heading">Things I've been working on</h2>
+        <div class="work-content">
+          <div class="work-content-box" onclick="location.href='/letha.html';">
+            <div class="work-content-title-img">
+              <div>
+                <img src="./img/mockupsArtboard-1.png" width="300px" />
+              </div>
+              <div>
+                <h3>Semester project 2</h3>
+                <p>HTML/CSS/Branding</p>
+                <p>This was a school project</p>
+                <p>https://github.com/ils95/semster-project-2-though</p>
+              </div>
+            </div>
+            <div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <div
+            class="work-content-box"
+            onclick="location.href='/frameworks.html';"
+          >
+            <div class="work-content-title-img">
+              <div>
+                <img src="./img/mockupsArtboard-1.png" width="300px" />
+              </div>
+              <div>
+                <h3>JS Frameworks</h3>
+                <p>HTML/CSS/Branding</p>
+                <p>This was a school project</p>
+                <p>
+                  https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-ils95.git
+                </p>
+              </div>
+            </div>
+            <div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <div
+            class="work-content-box"
+            onclick="location.href='/holidaze.html';"
+          >
+            <div class="work-content-title-img">
+              <div>
+                <img src="./img/mockupsArtboard-1.png" width="300px" />
+              </div>
+              <div>
+                <h3>Project exam 2</h3>
+                <p>HTML/CSS/Branding</p>
+                <p>This was a school project</p>
+                <p>https://github.com/ils95/project-exam-2-holidaze</p>
+              </div>
+            </div>
+            <div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <div
+            class="work-content-box"
+            onclick="location.href='/posters.html';"
+          >
+            <div>
+              <h3>Poster</h3>
+              <p>Graphic Design/Illustration</p>
+            </div>
+            <div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3>Can I help you?</h3>
+        <form>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+          <input id="send-button" type="submit" value="Send" />
+        </form>
+      </section>
+
+      <section id="about">
+        <div>
+          <h3>About me</h3>
+          <p>
+            I'm from the outskirts of Trondheim, but have been based in Oslo for
+            the past two years.
+          </p>
+          <p>
+            I have a Bachelors Degree in Graphic Design, and is currently
+            studying front-end developement.
+          </p>
+          <p>
+            I'm happiest while spending time in nature, either by my self or
+            with friends and family.
+          </p>
+        </div>
+        <div>
+          <img src="./img/me-bw2.png" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <h3>Socials</h3>
+        <p>Instagram</p>
+      </div>
+      <div>
+        <h3>More work</h3>
+        <p>Behance</p>
+        <p>Dribbble</p>
+      </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fc594f08a6.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
