@@ -7,8 +7,8 @@
 body {
   font-family: "Roboto Mono", monospace;
   color: #3c3e3c;
-  background-image: url(/img/bg.png);
   overflow-x: hidden;
+  background-image: url(/img/bg.png);
 }
 
 main {
@@ -47,7 +47,6 @@ p {
   font-size: 1rem;
   line-height: 1.8;
   color: #3c3e3c;
-  margin: 10px 20px 10px 0;
 }
 
 nav {
@@ -64,6 +63,7 @@ nav {
   top: 0;
   transition: top 0.2s ease-in;
   box-shadow: 0 1px 5px #ccc;
+  z-index: 3;
 }
 
 ul {
@@ -82,8 +82,8 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  height: 120vh;
-  width: 23.5%;
+  height: 100vh;
+  width: 20%;
   box-shadow: 0 1px 5px #ccc;
   transform: translateX(-110%);
   transition: transform 0.5s ease-in;
@@ -91,6 +91,22 @@ ul {
 
 .nav-links li {
   padding: 20px 0;
+}
+
+.nav-links li h2 {
+  color: #3c3e3c;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.nav-links li p {
+  color: #3c3e3c;
+  font-size: 10px;
+  text-align: center;
+  text-transform: lowercase;
 }
 
 .burger {
@@ -122,15 +138,31 @@ ul {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
+  padding: 6.5rem;
   box-shadow: 0 1px 5px #ccc;
+  background-image: url(/img/bg.png);
+  z-index: 2;
 }
 
 .intro a {
-  text-decoration: underline;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  margin-bottom: 50px;
+}
+
+.intro-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .intro-content {
@@ -152,30 +184,27 @@ ul {
 #work {
   width: 100%;
   height: 100%;
-  margin-top: 200px;
-}
-
-#work-heading {
-  padding: 0 0 50px 100px;
+  position: fixed;
+  z-index: 1;
+  background-image: url(/img/bg.png);
+  padding: 0 6.5rem;
 }
 
 .work-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-  padding-bottom: 100px;
+  flex-wrap: wrap;
+  height: 100vh;
 }
 
 .work-content-box {
-  padding: 50px 100px;
-  box-shadow: 0 1px 5px #ccc;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  padding-right: 2rem;
 }
 
 .work-content-title-img {
@@ -186,14 +215,74 @@ ul {
 }
 
 .work-content-title-img img {
-  margin-right: 50px;
+  margin-right: 2rem;
+}
+
+.work-content-title-img div img {
+  width: 300px;
+}
+
+.work-content-title-img .img-horisontal img {
+  width: 200px;
+}
+
+#cv {
+  padding: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/img/bg.png);
+  margin-top: 150vh;
+  z-index: 2;
+  box-shadow: 1px 0px 2px #ccc;
+}
+
+.cv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: 2rem;
+}
+
+.cv-paragraf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+#about {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  background-image: url(/img/bg.png);
+  z-index: 2;
+}
+
+#about h2 {
+  margin-bottom: 50px;
+}
+
+#about p {
+  margin-bottom: 20px;
+}
+
+#about img {
+  width: 400px;
 }
 
 #contact {
   width: 100%;
   height: 100%;
   padding: 100px;
-  margin-top: 100px;
+  background-image: url(/img/bg.png);
+  box-shadow: 1px 0px 2px #ccc;
+  z-index: 2;
 }
 
 form {
@@ -220,25 +309,6 @@ input#send-button {
   width: 200px;
 }
 
-#about {
-  padding: 100px;
-  display: flex;
-  align-items: center;
-  margin: 100px 0;
-}
-
-#about h2 {
-  margin-bottom: 50px;
-}
-
-#about p {
-  margin-bottom: 20px;
-}
-
-#about img {
-  width: 400px;
-}
-
 footer {
   width: 100%;
   height: 40vh;
@@ -248,6 +318,7 @@ footer {
   justify-content: space-evenly;
   align-items: baseline;
   padding: 100px;
+  z-index: 2;
 }
 
 footer h3 {
@@ -311,8 +382,15 @@ footer p {
 }
 
 @media screen and (max-width: 900px) {
+  h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   p {
     margin: 0;
+    font-size: 0.8rem;
+    line-height: 1;
   }
 
   nav {
@@ -330,8 +408,11 @@ footer p {
   }
 
   .intro {
+    padding: 10rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  .intro-wrapper {
     flex-direction: column;
-    padding: 150px 1vw;
   }
 
   .intro-content {
@@ -339,43 +420,63 @@ footer p {
   }
 
   .intro-content h1 {
-    font-size: 3rem;
+    font-size: 3.4rem;
   }
 
   .intro img {
     width: 90%;
+    margin-top: 1rem;
   }
 
-  #work-heading {
-    padding: 5vw;
+  #work {
+    position: relative;
+    padding: 1.5rem;
+  }
+
+  .work-content {
+    height: 100%;
   }
 
   .work-content-box {
-    padding: 10vw 5vw;
+    width: 100%;
+    margin: 2rem 0;
   }
 
   .work-content-title-img {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
   .work-content-title-img img {
-    margin: 0;
+    margin-right: 1rem;
   }
 
-  #contact {
-    padding: 5vw;
+  .work-content-title-img div img {
+    width: 150px;
   }
 
-  #about {
+  .work-content-title-img .img-horisontal img {
+    width: 100px;
+  }
+
+  #cv {
+    padding: 5rem 1rem 1rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .cv {
     flex-direction: column;
-    padding: 5vw;
   }
 
-  #about img {
-    width: 100%;
+  .cv div {
+    margin-bottom: 1rem;
+  }
+
+  .cv-paragraf p {
+    margin-top: 1rem;
   }
 
   footer {
@@ -417,6 +518,21 @@ footer p {
     width: 100%;
   }
 }
+
+@media screen and (min-width: 1600px) {
+  nav {
+    padding: 20px 15rem;
+  }
+
+  .intro {
+    padding: 6.5rem 15rem;
+  }
+
+  #work {
+    padding: 0 15rem;
+  }
+}
+
 .nav-active {
   transform: translateX(0%);
 }

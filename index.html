@@ -7,6 +7,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto+Mono:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/fc594f08a6.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Inger Lise Stensheim Portfolio</title>
     <meta
       name="viewport"
@@ -16,7 +20,7 @@
     <meta name="description" content="This is my portfolio" />
     <meta
       name="keywords"
-      content="portfolio, front-end developement, graphic design, web design"
+      content="portfolio, front-end utvikling, grafisk design, web design"
     />
     <link rel="icon" href="img/favicon.png" />
   </head>
@@ -30,20 +34,15 @@
           <div class="line3"></div>
         </div>
         <div>
-          <a href="/"><h2 class="site-title">Portfolio</h2></a>
+          <a href="/"><h2 class="site-title">Portefølje</h2></a>
         </div>
         <ul class="nav-links">
           <li>
-            <a href="/">Home</a>
+            <a href="/">Hjem</a>
           </li>
           <li>
-            <a href="#work">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#about">About me</a>
+            <h2>Kontakt</h2>
+            <p>ingerlise_s@hotmail.com</p>
           </li>
         </ul>
         <div class="logo">
@@ -52,84 +51,80 @@
       </nav>
 
       <section class="intro">
-        <div class="intro-content">
-          <h1>A Graphic & Web Designer to be.</h1>
-          <p>
-            Hi, I'm Inger Lise Stensheim. I'm a student in front-end
-            developement, and former student in Graphic Design. Below are some
-            projects I've made on my way and on the side.
-          </p>
-          <a href="#work">View projects</a>
+        <div class="intro-wrapper">
+          <div class="intro-content">
+            <h1>Hei, jeg heter Inger Lise Stensheim.</h1>
+            <p>
+              Velkommen til min portefølje. Her kan du ta en titt på det jeg har
+              holdt på med innen front-end utvikling og grafisk design de siste
+              årene.
+            </p>
+          </div>
+          <img src="./img/meg.jpg" />
         </div>
-        <img src="./img/me-bw.png" />
+        <a href="#work">Ta en titt</a>
+        <i class="fa fa-solid fa-arrow-down"></i>
       </section>
 
       <section id="work">
-        <h2 id="work-heading">Things I've been working on</h2>
         <div class="work-content">
           <div class="work-content-box" onclick="location.href='/letha.html';">
             <div class="work-content-title-img">
               <div>
-                <img src="./img/mockupsArtboard-1.png" width="300px" />
+                <img src="./img/letha/letha-desktop1.gif" width="300px" />
               </div>
               <div>
-                <h3>Semester project 2</h3>
-                <p>HTML/CSS/Branding</p>
-                <p>This was a school project</p>
-                <p>https://github.com/ils95/semster-project-2-though</p>
+                <h3>"Letha"</h3>
+                <p>HTML/CSS/JS + Branding/Design</p>
               </div>
             </div>
             <div>
               <i class="fas fa-chevron-right"></i>
             </div>
           </div>
-          <div
-            class="work-content-box"
-            onclick="location.href='/frameworks.html';"
-          >
+
+          <div class="work-content-box" onclick="location.href='#';">
             <div class="work-content-title-img">
               <div>
-                <img src="./img/mockupsArtboard-1.png" width="300px" />
+                <img src="./img/signi/ikoner.png" />
               </div>
               <div>
-                <h3>JS Frameworks</h3>
-                <p>HTML/CSS/Branding</p>
-                <p>This was a school project</p>
-                <p>
-                  https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-ils95.git
-                </p>
+                <h3>Ikoner</h3>
+                <p>Grafisk design</p>
               </div>
             </div>
             <div>
               <i class="fas fa-chevron-right"></i>
             </div>
           </div>
-          <div
-            class="work-content-box"
-            onclick="location.href='/holidaze.html';"
-          >
+
+          <div class="work-content-box" onclick="location.href='#';">
             <div class="work-content-title-img">
               <div>
-                <img src="./img/mockupsArtboard-1.png" width="300px" />
+                <img src="./img/avant/avant.png" />
               </div>
               <div>
-                <h3>Project exam 2</h3>
-                <p>HTML/CSS/Branding</p>
-                <p>This was a school project</p>
-                <p>https://github.com/ils95/project-exam-2-holidaze</p>
+                <h3>"Avant Garden"</h3>
+                <p>Branding/Design</p>
               </div>
             </div>
             <div>
               <i class="fas fa-chevron-right"></i>
             </div>
           </div>
+
           <div
             class="work-content-box"
             onclick="location.href='/posters.html';"
           >
-            <div>
-              <h3>Poster</h3>
-              <p>Graphic Design/Illustration</p>
+            <div class="work-content-title-img">
+              <div class="img-horisontal">
+                <img src="./img/posters/portrait-colors.jpg" />
+              </div>
+              <div>
+                <h3>Plakater</h3>
+                <p>Grafisk design/Illustrasjon</p>
+              </div>
             </div>
             <div>
               <i class="fas fa-chevron-right"></i>
@@ -138,70 +133,42 @@
         </div>
       </section>
 
-      <section id="contact">
-        <h3>Can I help you?</h3>
-        <form>
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-          />
-
-          <label for="email">Email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-          />
-
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Write something.."
-            style="height: 200px"
-          ></textarea>
-
-          <input id="send-button" type="submit" value="Send" />
-        </form>
-      </section>
-
-      <section id="about">
-        <div>
-          <h3>About me</h3>
-          <p>
-            I'm from the outskirts of Trondheim, but have been based in Oslo for
-            the past two years.
-          </p>
-          <p>
-            I have a Bachelors Degree in Graphic Design, and is currently
-            studying front-end developement.
-          </p>
-          <p>
-            I'm happiest while spending time in nature, either by my self or
-            with friends and family.
-          </p>
+      <section id="cv">
+        <h3>CV</h3>
+        <div class="cv-paragraf">
+          <h2>Bachelor i grafisk design</h2>
+          <p>Høyskolen Kristiania</p>
         </div>
-        <div>
-          <img src="./img/me-bw2.png" />
+        <div class="cv-paragraf">
+          <h2>Fagutdanning innen front-end utvikling</h2>
+          <p>Noroff School of Technology</p>
+        </div>
+        <div class="cv">
+          <div>
+            <h2>Adobe Illustrator</h2>
+            <h2>Adobe InDesign</h2>
+            <h2>Adobe Photoshop</h2>
+            <h2>Adobe XD/ Figma</h2>
+            <h2>Adobe Premier Pro</h2>
+          </div>
+          <div>
+            <h2>HTML/CSS</h2>
+            <h2>Flexbox/Sass</h2>
+            <h2>JavaScript/Typescript</h2>
+            <h2>React/Bootstrap</h2>
+            <h2>Postman/Strapi</h2>
+            <h2>GitHub</h2>
+          </div>
         </div>
       </section>
+
+      <footer>
+        <div class="cv-paragraf">
+          <h2>Ta gjerne kontakt</h2>
+          <p>ingerlise_s@hotmail.com</p>
+        </div>
+      </footer>
     </main>
-
-    <footer>
-      <div>
-        <h3>Socials</h3>
-        <p>Instagram</p>
-      </div>
-      <div>
-        <h3>More work</h3>
-        <p>Behance</p>
-        <p>Dribbble</p>
-      </div>
-    </footer>
 
     <script src="js/index.js"></script>
     <script
